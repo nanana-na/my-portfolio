@@ -43,7 +43,7 @@ class QuestionItemController extends Controller
     public function store(Request $request)
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $question_item = new QuestionItem;              //commentのインスタンスを作成
@@ -79,7 +79,7 @@ class QuestionItemController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         return view('questionitems.edit', compact('question_item'));
@@ -100,7 +100,7 @@ class QuestionItemController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $question_item->option  = $request->option;

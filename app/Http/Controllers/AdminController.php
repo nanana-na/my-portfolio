@@ -30,7 +30,7 @@ class AdminController extends Controller
     public function index()
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $users = User::all();
@@ -45,7 +45,7 @@ class AdminController extends Controller
     public function create()
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $pas = Str::random(5);
@@ -61,7 +61,7 @@ class AdminController extends Controller
     public function store(AdminRequest $request)
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $user = new User;
@@ -81,7 +81,7 @@ class AdminController extends Controller
     public function show($id)
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $user = User::find($id);
@@ -97,7 +97,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $user = User::find($id);
@@ -115,7 +115,7 @@ class AdminController extends Controller
     public function update(AdminupRequest $request, $id)
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $user = User::find($id);
@@ -138,7 +138,7 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $user = User::find($id);

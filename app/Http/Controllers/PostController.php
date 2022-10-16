@@ -39,7 +39,7 @@ class PostController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user = Auth::user()->number;
-        if ($user == '20238297') {
+        if ($user == '20000000') {
             return view('posts.create');
         }
 
@@ -63,7 +63,7 @@ class PostController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $post = new Post;

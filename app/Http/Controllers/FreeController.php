@@ -39,7 +39,7 @@ class FreeController extends Controller
     public function create()
     {
         $user = Auth::user()->number;
-        if ($user == '20238297') {
+        if ($user == '20000000') {
             return view('frees.create');
         } else {
             return redirect('/error')->with('flash_message', 'エラーが出ました');

@@ -28,7 +28,7 @@ class YetController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $yets = Yet::all();
@@ -63,7 +63,7 @@ class YetController extends Controller
             return view('/error');
         }
         $yet->save();
-        return redirect()->route('posts.index')->with('flash_message', '認証されるまでしばらくお待ちください。すぐに確認したい場合はInstagramにご連絡ください');
+        return redirect()->route('posts.index')->with('flash_message', '認証されるまでしばらくお待ちください。');
     }
 
     /**
@@ -78,7 +78,7 @@ class YetController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $yet = Yet::find($id);
@@ -100,7 +100,7 @@ class YetController extends Controller
             return redirect('/error')->with('flash_message', 'エラーが出ました');
         }
         $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
+        if ($user_number !== '20000000') {
             return  redirect('/error');
         }
         $yet = Yet::find($id);

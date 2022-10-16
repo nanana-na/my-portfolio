@@ -104,7 +104,7 @@ class CommentController extends Controller
     }
     public function reduce()
     {
-        if (Auth::user()->number !== '20238297') {
+        if (Auth::user()->number !== '20000000') {
             return redirect()->route('friends.index')->with('flash_message', 'エラーが出ました');
         }
         $today = new Carbon('today');

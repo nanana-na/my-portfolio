@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Post;
 
 class UsersTableSeeder extends Seeder
 {
@@ -14,44 +15,49 @@ class UsersTableSeeder extends Seeder
     {
 
         User::create([
-            'name' => 'nakao',
-            'number' => '20238297',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
+            'name' => 'master',
+            'number' => '20000000',
+            'password' => Hash::make('password')
         ]);
-        User::create([
-            'name' => 'nakao1',
-            'number' => '20238296',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
+        Post::create([
+            'user_id'  => '1',
+            'group'  => '佐賀大学バトミントン部',
+            'place'  => '佐賀大学体育館',
+            'date'  => '月、水、土、日',
+            'icon'  => '',
+            'time'   => '月、水→18:00~20:00
+            土、日→17:00~19:00',
+            'body'   => '	初心者の方も経験者の方も大歓迎です！
+            大学でもバドミントン頑張りたい人や、これからバドミントンを始めたいって人はぜひ見学しに来てください！
+            見学の際はシューズを持って来てもらえれば打てます！'
         ]);
         User::create([
             'name' => '佐賀大学バトミントン部',
             'number' => '0001',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
+            'password' => Hash::make('password')
         ]);
+
         User::create([
             'name' => 'CUBE',
             'number' => '0002',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
+            'password' => Hash::make('password')
         ]);
         User::create([
             'name' => 'Geese',
             'number' => '0003',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
-        ]);
+            'password' => Hash::make('password')        ]);
         User::create([
             'name' => 'BDD',
             'number' => '0004',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
+            'password' => Hash::make('password')
         ]);
         User::create([
             'name' => 'CLOVER',
             'number' => '0005',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
-        ]);
+            'password' => Hash::make('password')        ]);
         User::create([
             'name' => 'Score!!',
             'number' => '0006',
-            'password' => '$2y$10$4vwqtdJfNraI/ICszol7YOBOjd1UZOic2YuMsUYBdVR7pCX/9wV.y'
-        ]);
+            'password' => Hash::make('password')        ]);
     }
 }
