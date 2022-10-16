@@ -57,7 +57,7 @@
             </ul>
           </div>
           @if (isset(Auth::user()->number))
-          @if(Auth::user()->number == 20238297)
+          @if(Auth::user()->number == 20000000)
           <a href="{{ route('questionitems.edit', $question_item->id) }}">修正</a>
           @endif
           @endif
@@ -67,7 +67,7 @@
           <p>{{$question->created_at->format('n月j日')}}</p>
         </div>
         @if (isset(Auth::user()->number))
-        @if(Auth::user()->number == 20238297)
+        @if(Auth::user()->number == 20000000)
         <form action="{{ route('questionitems.store') }}" method="POST">
           @csrf
           <input type="hidden" name="question_id" value="{{$question->id}}">
@@ -94,7 +94,7 @@
       @endforeach
     </div>
     @if (isset(Auth::user()->number))
-    @if(Auth::user()->number == 20238297)
+    @if(Auth::user()->number == 20000000)
     <a href="/questions/create">作成</a>
     @endif
     @endif

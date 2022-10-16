@@ -11,7 +11,7 @@
   </nav>
 </header>
 @if (isset(Auth::user()->number))
-@if(Auth::user()->number == 20238297)
+@if(Auth::user()->number == 20000000)
 <div class="container">
   <ul>
     <li class="p-1"><a class="btn btn-hai" href="/posts/create">
